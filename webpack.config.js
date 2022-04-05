@@ -10,14 +10,14 @@ module.exports = {
   mode: 'development',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Leader board',
+      template: './src/index.html',
     }),
   ],
   module: {
-    rules: {
+    rules: [{
       test: /\.css$/i,
       use: ['style-loader', 'css-loader'],
-    },
+    }],
   },
   devServer: {
     static: './dist',
