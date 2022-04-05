@@ -5,12 +5,18 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'main.js',
-        path : path.resolve(__dirname,'dist'),
+        path: path.resolve(__dirname, 'dist'),
     },
-    mode:'development',
+    mode: 'development',
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Leader board',
         }),
-    ]
+    ],
+    module: {
+        rules:{
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+        },
+    },
 }
