@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n// const gameName = { name: 'world-cup' };\nfetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games', {\n  method: 'POST',\n  body: JSON.stringify({ name: 'My first game' }),\n}).then((res) => res.json).then((result) => console.error(result));\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
 
 /***/ })
 
