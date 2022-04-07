@@ -12,8 +12,7 @@ const addScore = (user, score) => {
       },
     },
   )
-    .then((res) => res.json())
-    .then((result) => console.log(result));
+    .then((res) => res.json());
 };
 
 export default addScore;
