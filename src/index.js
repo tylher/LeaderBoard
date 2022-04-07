@@ -1,29 +1,24 @@
 import './style.css';
+import createItem from './modules/createItem.js';
+import getScoresFunc from './modules/getScores.js';
+import addScore from './modules/addScore.js';
 
 const refresh = document.querySelector('.refresh');
 const submit = document.querySelector('.submit');
 const user = document.querySelector('input[type=text]');
 const score = document.querySelector('input[type=number]');
+const scoreHolder = document.querySelector('ul');
+
 submit.addEventListener('click', () => {
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zD75K06bGt7kuSalEdJK/scores', {
-    method: 'POST',
-    body: JSON.stringify({
-      user: user.value,
-      score: score.value,
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  }).then((res) => res.json()).then((result) => console.log(result));
+  addScore(user, score);
 });
 
-refresh.addEventListener('click', () => {
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zD75K06bGt7kuSalEdJK/scores', {
-    method: 'GET',
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  }).then((res) => res.json()).then((result) => {
-    console.log(result);
+refresh.addEventListener('click', async () => {
+  const data = await getScoresFunc().then((result) => result);
+  scoreHolder.innerHTML = '';
+  data.result.forEach(({ user, score }) => {
+    const userTemp = `${user}:${score}`;
+    const htmlTemp = createItem(userTemp);
+    scoreHolder.append(htmlTemp);
   });
 });
