@@ -13,11 +13,11 @@ body {
 }
 
 h1 {
-  margin: 20px 50px 5px;
+  margin: 20px 10% 5px;
   color: rgb(8, 8, 51);
 }
 
-h2 {
+h2,p {
   color: rgb(8, 8, 51);
 }
 
@@ -56,7 +56,7 @@ button {
   padding: 10px 25px;
   background-color: rgb(136, 159, 196);
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 5px 5px 10px rgb(119, 119, 119);
   font-size: 0.5em;
   font-weight: 500;
