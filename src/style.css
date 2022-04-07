@@ -1,5 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap');
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+
+
+body{
+  font-family: 'Cormorant', serif;
+  font-size: 35px;
+  background-color: rgb(219, 219, 255);
+}
+
+h1{
+  margin: 20px 50px 5px;
+  color: rgb(8, 8, 51);
+}
+
+h2{
+  color: rgb(8, 8, 51);
+}
+
+.main-flex-grp{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: start;
+  gap: 150px;
+  padding: 30px 40px 0;
+}
+
+.group{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+input{
+  padding: 10px;
+  width: 100%;
+  font-size: 0.5em;
+}
+
+button{
+  padding: 10px 25px ;
+  background-color: rgb(136, 159, 196);
+  border: none;
+  border-radius: 2px;
+  box-shadow: 5px 5px 10px rgb(119, 119, 119);
+  font-size: 0.5em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: rgb(64, 64, 138);
+  color: rgb(240, 239, 252);
+}
+
+button:active{
+  box-shadow: 2px 3px 6px grey;
+}
+
+ul{
+  width: 100%;
+   border: 2px solid  rgb(98, 134, 192);
+   margin-top: 10px;
+}
+
+li{
+  list-style: none;
+   color: rgb(8, 8, 51);
+   font-weight: 500;
+   padding: 3px 5px;
+}
+
+li:nth-child(even){
+  background-color: rgb(98, 134, 192);
+}
+
+
+@media screen and (max-width:992px) {
+  body{
+    font-size: 25px;
+  }
+
+  .main-flex-grp{
+    gap: 70px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  body{
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .main-flex-grp{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form{
+    width: 95vw;
+    align-items: center;
+  }
+
+  input{
+    width: 70%;
+  }
+
+  ul{
+    text-align: start;
+  }
 }

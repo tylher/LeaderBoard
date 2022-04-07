@@ -10,7 +10,7 @@ const score = document.querySelector('input[type=number]');
 const scoreHolder = document.querySelector('ul');
 
 submit.addEventListener('click', async () => {
-  await addScore(user, score).then((msg) => console.log(msg)).catch((err) => console.log(err));
+  await addScore(user, score).then((msg) => msg).catch((err) => err);
 });
 
 refresh.addEventListener('click', async () => {
