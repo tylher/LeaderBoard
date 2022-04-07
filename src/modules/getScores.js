@@ -1,9 +1,8 @@
-const getScoresFunc = () => {
-  const getScores = fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zD75K06bGt7kuSalEdJK/scores',
-  )
-    .then((res) => res.json());
-  return getScores;
+const getScoresFunc = async () => {
+  const getScores = await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/SRYS7JHHhXANag7HC4Xc/scores',
+  );
+  return getScores.json();
 };
 
 export default getScoresFunc;
