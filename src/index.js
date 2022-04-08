@@ -11,6 +11,7 @@ const scoreHolder = document.querySelector('ul');
 
 submit.addEventListener('click', async () => {
   await addScore(user, score).then((msg) => msg).catch((err) => err);
+  setTimeout(() => refresh.click(), 2000);
 });
 
 refresh.addEventListener('click', async () => {
